@@ -1,0 +1,12 @@
+.button {
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border: 2px solid #cecece;
+}
+
+.btn {
+  grid-column: 1/3;
+}
