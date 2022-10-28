@@ -16,22 +16,22 @@ class Calculator extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-	handleClick = (btnName) => {
-	  this.setState((prevState) => calculate(prevState, btnName));
-	};
+  handleClick = (btnName) => {
+    this.setState((prevState) => calculate(prevState, btnName));
+  };
 
-	render() {
-	  const { total, next, operation } = this.state;
-	  return (
-  <div className="calculator">
-    <Screen total={total} next={next} operation={operation} />
-    <div className="bottom">
-      <Last handleClick={this.handleClick} />
-      <Buttons handleClick={this.handleClick} />
-    </div>
-  </div>
-	  );
-	}
+  render() {
+    const { total, next, operation } = this.state;
+    return (
+      <div className="calculator">
+        <Screen total={total} next={next} operation={operation} />
+        <div className="bottom">
+          <Last handleClick={this.handleClick} />
+          <Buttons handleClick={this.handleClick} />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Calculator;
