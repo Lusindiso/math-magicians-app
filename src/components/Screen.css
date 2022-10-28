@@ -2,18 +2,17 @@
   background-color: #858694;
   grid-column: 1/-1;
   grid-row: 1/2;
-  font-size: 5rem;
+  font-size: 4.5rem;
   display: flex;
-  text-align: right;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
   color: white;
   padding: 1rem;
-  height: 8rem;
+  height: 10rem;
   border: none;
-  width: 100%;
 }
 
-.screen:active,
-.screen:focus {
-  outline: none;
+.operation {
+  font-size: 2.5rem;
 }
