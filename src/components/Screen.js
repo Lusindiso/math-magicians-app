@@ -4,7 +4,8 @@ import './Screen.css';
 
 class Screen extends PureComponent {
   render() {
-    const { total, next, operation } = this.props;
+    // eslint-disable-next-line react/destructuring-assignment
+    const { total, next, operation } = this.props.value;
     return (
       <div className="screen">
         <p>{next || total}</p>
@@ -15,9 +16,8 @@ class Screen extends PureComponent {
 }
 
 Screen.propTypes = {
-  next: PropTypes.number.isRequired,
-  total: PropTypes.number.isRequired,
-  operation: PropTypes.bool.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  value: PropTypes.object.isRequired,
 };
 
 export default Screen;
