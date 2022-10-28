@@ -33,4 +33,5 @@ class Calculator extends Component {
 	  );
 	}
 }
+
 export default Calculator;
