@@ -1,16 +1,16 @@
 .nav {
-	display: flex;
-	justify-content: space-between;
-	list-style: none;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
 }
 
 .nav a {
-	padding: 10px;
-	text-decoration: none;
-	color: rgb(4, 92, 87);
-	font-weight: 600;
+  padding: 10px;
+  text-decoration: none;
+  color: rgb(4, 92, 87);
+  font-weight: 600;
 }
 
 .nav li:not(:last-child) {
-	border-right: 2px solid black;
+  border-right: 2px solid black;
 }

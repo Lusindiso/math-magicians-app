@@ -1,20 +1,20 @@
 .calculator {
-	margin: 0 auto;
-	width: 60%;
-	max-width: 80rem;
-	height: 70%;
-	border: 1px solid white;
-	border-top-width: 4px;
-	display: grid;
+  margin: 0 auto;
+  width: 60%;
+  max-width: 80rem;
+  height: 70%;
+  border: 1px solid white;
+  border-top-width: 4px;
+  display: grid;
 }
 
 .bottom {
-	height: 50vh;
-	display: grid;
-	grid-template-areas:
-		'button button button last'
-		'button button button last'
-		'button button button last'
-		'button button button last'
-		'button button button last';
+  height: 50vh;
+  display: grid;
+  grid-template-areas:
+    'button button button last'
+    'button button button last'
+    'button button button last'
+    'button button button last'
+    'button button button last';
 }
