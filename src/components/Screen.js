@@ -1,15 +1,14 @@
+/* eslint-disable react/destructuring-assignment */
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import './Screen.css';
 
 class Screen extends PureComponent {
   render() {
-    // eslint-disable-next-line react/destructuring-assignment
-    const { total, next, operation } = this.props.value;
     return (
       <div className="screen">
-        <p>{next || total}</p>
-        <p className="operation">{operation || ''}</p>
+        <p>{this.props.next || this.props.total}</p>
+        <p className="operation">{this.props.operation || ''}</p>
       </div>
     );
   }
@@ -17,7 +16,10 @@ class Screen extends PureComponent {
 
 Screen.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
-  value: PropTypes.object.isRequired,
+  operation: PropTypes.string.isRequired,
+  total: PropTypes.string.isRequired,
+  next: PropTypes.string.isRequired,
+
 };
 
 export default Screen;

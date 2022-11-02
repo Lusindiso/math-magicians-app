@@ -11,13 +11,12 @@ const Calculator = () => {
     next: 0,
     operation: null,
   });
-
   const handleClick = (btnName) => {
     setState((prevState) => calculate(prevState, btnName));
   };
   return (
     <div className="calculator">
-      <Screen value={state} />
+      <Screen total={state.total} next={state.next} operation={state.operation} />
       <div className="bottom">
         <Last handleClick={handleClick} />
         <Buttons handleClick={handleClick} />
