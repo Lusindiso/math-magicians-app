@@ -99,3 +99,53 @@ describe('Functions test', () => {
     expect(operate(numberOne, numberTwo, operation)).toBe('Can\'t find modulo as can\'t divide by 0.');
   });
 });
+
+describe('component test', () => {
+  it('Calculator component should perform the calculations correctly on initial run', () => {
+    const tree = renderer.create(<Calculator />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  it('Quote component should perform correctly on initial run', () => {
+    const tree = renderer.create(<Quotes />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  it('CalculatorPage component should perform correctly on initial run', () => {
+    const tree = renderer.create(<CalculatorPage />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  it('Home component should perform correctly on initial run', () => {
+    const tree = renderer.create(<Home />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  it('Buttons component should perform correctly on initial run', () => {
+    const tree = renderer.create(<Buttons />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  it('Last component should perform correctly on initial run', () => {
+    const tree = renderer.create(<Last />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  it('NavBar component should perform correctly on initial run', () => {
+    const tree = renderer.create(<Router><NavBar /></Router>).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  it('Header component should perform correctly on initial run', () => {
+    const tree = renderer.create(<Router><Header /></Router>).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  it('Button component should perform correctly on initial run', () => {
+    const tree = renderer.create(<Button />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  it('Screen component should perform correctly on initial run', () => {
+    const tree = renderer.create(<Screen />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  test('Simulation of user clicking button 9 twice', () => {
+    render(<Calculator />);
+    const buttonEl = screen.getByText(/9/i);
+    userEvent.click(buttonEl);
+    userEvent.click(buttonEl);
+    expect(screen.getByText(/99/i)).toBeInTheDocument();
+  });
+});
