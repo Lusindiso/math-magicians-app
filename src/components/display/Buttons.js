@@ -36,7 +36,8 @@ class Buttons extends PureComponent {
 }
 
 Buttons.propTypes = {
-  handleClick: PropTypes.func.isRequired,
+  // eslint-disable-next-line react/require-default-props
+  handleClick: PropTypes.func,
 };
 
 export default Buttons;

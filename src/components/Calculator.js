@@ -7,17 +7,16 @@ import calculate from '../logic/calculate';
 
 const Calculator = () => {
   const [state, setState] = useState({
-    total: 0,
-    next: 0,
+    total: '0',
+    next: '0',
     operation: null,
   });
-
   const handleClick = (btnName) => {
     setState((prevState) => calculate(prevState, btnName));
   };
   return (
     <div className="calculator">
-      <Screen value={state} />
+      <Screen total={state.total} next={state.next} operation={state.operation} />
       <div className="bottom">
         <Last handleClick={handleClick} />
         <Buttons handleClick={handleClick} />

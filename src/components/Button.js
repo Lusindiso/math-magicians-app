@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import './Button.css';
@@ -18,8 +19,8 @@ class Button extends PureComponent {
 }
 
 Button.propTypes = {
-  value: PropTypes.string.isRequired,
-  handleClick: PropTypes.func.isRequired,
+  value: PropTypes.string,
+  handleClick: PropTypes.func,
 };
 
 export default Button;
