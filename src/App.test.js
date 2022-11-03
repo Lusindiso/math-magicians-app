@@ -27,19 +27,36 @@ describe('Functions test', () => {
     };
     const buttonName = '=';
     if (buttonName === '.') {
-      expect(calculate(initialItems, buttonName)).toEqual(
-        { total: 0, next: null, operation: null },
-      );
+      expect(calculate(initialItems, buttonName)).toEqual({
+        total: 0,
+        next: null,
+        operation: null,
+      });
     } else if (buttonName === '.') {
-      expect(calculate(initialItems, buttonName)).toEqual(
-        { total: 0.0, next: null, operation: null },
-      );
+      expect(calculate(initialItems, buttonName)).toEqual({
+        total: 0.0,
+        next: null,
+        operation: null,
+      });
     } else if (buttonName === '1') {
-      expect(calculate(initialItems, buttonName)).toEqual(
-        { total: null, next: '1' },
-      );
+      expect(calculate(initialItems, buttonName)).toEqual({
+        total: null,
+        next: '1',
+      });
     } else if (buttonName === '=') {
       expect(calculate(initialItems, buttonName)).toEqual({});
+    } else if (buttonName === '+/-') {
+      expect(calculate(initialItems, buttonName)).toEqual({
+        total: 0,
+        next: null,
+        operation: null,
+      });
+    } else if (buttonName === 'AC') {
+      expect(calculate(initialItems, buttonName)).toEqual({
+        total: 0,
+        next: null,
+        operation: null,
+      });
     }
   });
 
@@ -80,7 +97,7 @@ describe('Functions test', () => {
     const numberTwo = '0';
     const operation = '÷';
 
-    expect(operate(numberOne, numberTwo, operation)).toBe('Can\'t divide by 0.');
+    expect(operate(numberOne, numberTwo, operation)).toBe("Can't divide by 0.");
   });
 
   test('operate.js remainder test', () => {
@@ -96,7 +113,9 @@ describe('Functions test', () => {
     const numberTwo = '0';
     const operation = '%';
 
-    expect(operate(numberOne, numberTwo, operation)).toBe('Can\'t find modulo as can\'t divide by 0.');
+    expect(operate(numberOne, numberTwo, operation)).toBe(
+      "Can't find modulo as can't divide by 0.",
+    );
   });
 });
 
@@ -126,11 +145,23 @@ describe('component test', () => {
     expect(tree).toMatchSnapshot();
   });
   it('NavBar component should perform correctly on initial run', () => {
-    const tree = renderer.create(<Router><NavBar /></Router>).toJSON();
+    const tree = renderer
+      .create(
+        <Router>
+          <NavBar />
+        </Router>,
+      )
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
   it('Header component should perform correctly on initial run', () => {
-    const tree = renderer.create(<Router><Header /></Router>).toJSON();
+    const tree = renderer
+      .create(
+        <Router>
+          <Header />
+        </Router>,
+      )
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
   it('Button component should perform correctly on initial run', () => {

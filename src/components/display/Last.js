@@ -18,7 +18,8 @@ class Last extends PureComponent {
 }
 
 Last.propTypes = {
-  handleClick: PropTypes.func.isRequired,
+  // eslint-disable-next-line react/require-default-props
+  handleClick: PropTypes.func,
 };
 
 export default Last;

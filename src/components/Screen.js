@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 /* eslint-disable react/destructuring-assignment */
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
@@ -16,9 +17,9 @@ class Screen extends PureComponent {
 
 Screen.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
-  operation: PropTypes.string.isRequired,
-  total: PropTypes.string.isRequired,
-  next: PropTypes.string.isRequired,
+  operation: PropTypes.string,
+  total: PropTypes.string,
+  next: PropTypes.string,
 
 };
 
